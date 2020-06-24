@@ -26,7 +26,7 @@ jobs:
     version: 12
     
     -name: GitHub Action for Yarn
-  uses: Borales/actions-yarn@v2.3.0
+uses: Borales/actions-yarn@v2.3.0
      
   with:
     # Yarn command
@@ -34,10 +34,10 @@ jobs:
     
     -name: creating build
     run:  yarn build
-    
-    -name: installing surge
-      run: npm install -g surge
+
+  -name: installing surge
+  run: npm install -g surge
       
-      -name: deploying on surge
-       run: surge ./build https://http://azeem1sttestapp.surge.sh/ --token ${{secrets.surge_token}}
+  -name: deploying on surge
+  run: surge ./build https://http://azeem1sttestapp.surge.sh/ --token ${{secrets.surge_token}}
  
